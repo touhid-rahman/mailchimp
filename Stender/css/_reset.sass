@@ -1,0 +1,133 @@
+*
+    -webkit-font-smoothing: antialiased
+    -webkit-text-size-adjust: 100% //Stops email clients resizing small text
+    -ms-text-size-adjust: 100% //Stops email clients resizing small text
+html, body
+    margin: 0
+    padding: 0
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+body
+    width: 100% !important
+    min-width: 100% !important
+    margin: 0 !important // Fixing margin for Android 4.4
+    padding: 0 !important
+    background-color: #dde0e1
+    font-family: 'Outfit',Helvetica Neue,Helvetica,Arial,sans-serif
+    mso-line-height-rule: exactly
+    word-break: break-word
+    border: 0
+    -moz-osx-font-smoothing: grayscale
+    -webkit-font-smoothing: antialiased
+    -ms-text-size-adjust: 100% // Fixing text size for Windows Mobile
+    -webkit-text-size-adjust: 100% // Fixing text size for OSX/iOS
+div[style*="margin: 16px 0"] // Fixing margin for Android 4.4
+body, table, td, a, li
+    -ms-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%
+table, td
+    border-collapse: collapse 
+    mso-table-lspace: 0pt // Prevents Outlook from adding extra space
+    mso-table-rspace: 0pt // Prevents Outlook from adding extra space
+table
+    border: 0
+    border-spacing: 0
+td
+    border-collapse: collapse !important
+    -ms-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%
+a
+    text-decoration: none
+a img
+    border: none
+a, img, table
+    max-width: 100% 
+b 
+    font-weight: 700
+img
+    height: auto
+    line-height: 100% 
+    border: 0 
+    text-decoration: none 
+    outline: none 
+    -ms-interpolation-mode: bicubic // Allow smoother rendering of resized image in Outlook
+img.g-img + div // Hiding blank div right after Image
+    display: none !important
+ul, ol, li
+    margin: 0
+    padding: 0
+html, body, div, table, tr, td, span, a // IOS Prevents resize text
+    -webkit-text-size-adjust: none !important
+#MessageViewBody, #MessageWebViewDiv // Forces Samsung Android mail clients to use the entire viewport
+    width: 100% !important
+/******************************************************************************************/
+/*   STARTS: A work-around for email clients automatically linking certain text strings   */
+/******************************************************************************************/
+a[x-apple-data-detectors], .unstyle-auto-detected-links a, .aBn // iOS
+    border-bottom: 0 !important
+    color: inherit !important
+    cursor: default !important
+    font-family: inherit !important
+    font-size: inherit !important
+    font-weight: inherit !important
+    line-height: inherit !important
+    text-decoration: none !important
+u + #body a, // Gmail
+#MessageViewBody a // SamSung
+    color: inherit !important
+    font-family: inherit !important
+    font-size: inherit !important
+    font-weight: inherit !important
+    line-height: inherit !important
+    text-decoration: none !important
+.blueLinks a
+    color: inherit !important
+    text-decoration: none !important
+/****************************************************************************************/
+/*   ENDS: A work-around for email clients automatically linking certain text strings   */
+/****************************************************************************************/
+.im // Prevents Gmail from changing the text color in conversation threads
+    color: inherit !important
+.a6S // Prevents Gmail from displaying an download button on large, non-linked images
+    display: none !important
+    opacity: 0.01 !important
+#outlook a
+    padding: 0 // Fixing padding for Outlook
+.ReadMsgBody
+    width: 100%
+.ExternalClass
+    width: 100% 
+.ExternalClass *
+    line-height: 150%
+.backgroundTable
+    width: 100% !important 
+    margin: 0px auto
+    padding: 0
+.appleLinks a
+    color: #000001 !important 
+    text-decoration: none 
+    text-decoration: none !important
+.webkit
+    max-width: 600px 
+    margin: 0px auto
+.outer
+    width: 100%
+    max-width: 600px 
+    margin: 0px auto
+// .da100
+//     width: 100% !important
+//     max-width: 100% !important
+// .dw100
+//     width: 100% !important
+// .dmw100
+//     max-width: 100% !important
+// .ha 
+//     height: auto !important
+// .show_mobile 
+//     display: none
+// .outlook_show_mobile
+//     mso-hide: all
+//     mso-hide: all !important
+// .hover_td_none:hover, .hover_td_none:hover font
+//     text-decoration: none
+//     text-decoration: none !important
